@@ -1,0 +1,47 @@
+/*
+	Theme Name: Portfolio website
+	Theme URI: Your Theme's URI
+	Description: Denise Portfolio Website
+	Version: 1.0
+	Author: Denise Golverdingen
+	Author URI: Your website address.
+*/
+
+* {
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+ }
+ 
+ html body {
+	top: 0!important;
+ } 
+
+.container {
+	width: 100%;
+	padding: 0 calc(50% - 500px);
+
+	@media screen and (max-width: 768px) {
+		padding: 0 25px;
+	}
+}
+
+
+
+// Layout
+@import "layout/typography";
+
+// Mixins
+@import "mixins/colors";
+
+
+// Partials
+@import "partials/header";
+@import "partials/home";
+@import "partials/intro";
+@import "partials/portfolio";
+@import "partials/footer";
+
+// Templates 
+@import "layout/template";

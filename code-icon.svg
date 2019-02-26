@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="87px" height="59px" viewBox="0 0 87 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>code icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-home" transform="translate(-49.000000, -476.000000)">
+            <g id="code-icon" transform="translate(50.000000, 477.000000)">
+                <rect id="Rectangle-4" fill="#FFFFFF" x="0" y="0" width="85" height="57" rx="4"></rect>
+                <path d="M0,8 L0,2.78773333 C0,1.248 1.2202454,0 2.7257362,0 L82.2742638,0 C83.7797546,0 85,1.248 85,2.78773333 L85,8" id="Fill-1" fill="#E7F5FF"></path>
+                <path d="M75.6134969,57 L2.7257362,57 C1.2202454,57 0,55.7763303 0,54.2666147 L0,2.73338532 C0,1.22366972 1.2202454,0 2.7257362,0 L82.2742638,0 C83.7797546,0 85,1.22366972 85,2.73338532 L85,54.2666147" id="Stroke-3" stroke="#0097FF" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M1,8 L81,8" id="Stroke-5" stroke="#0097FF" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M7.5,5 C6.67157143,5 6,4.32842857 6,3.5 C6,2.67157143 6.67157143,2 7.5,2 C8.32842857,2 9,2.67157143 9,3.5" id="Stroke-7" stroke="#0097FF" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M13.5,5 C12.6715714,5 12,4.32842857 12,3.5 C12,2.67157143 12.6715714,2 13.5,2 C14.3284286,2 15,2.67157143 15,3.5" id="Stroke-9" stroke="#0097FF" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M20.5,5 C19.6715714,5 19,4.32842857 19,3.5 C19,2.67157143 19.6715714,2 20.5,2 C21.3284286,2 22,2.67157143 22,3.5" id="Stroke-11" stroke="#0097FF" stroke-width="2" stroke-linecap="round"></path>
+                <polyline id="Stroke-13" stroke="#0097FF" stroke-width="2" stroke-linecap="round" points="31 44 19 32.0002564 31 20"></polyline>
+                <polyline id="Stroke-15" stroke="#0097FF" stroke-width="2" stroke-linecap="round" points="55 44 67 32.0002564 55 20"></polyline>
+                <path d="M53,16 L34,50" id="Stroke-17" stroke="#0097FF" stroke-width="2" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,425 @@
+.intro-white {
+	background-color: $white!important;
+	margin-top: 55px;
+
+	@media screen and (min-width: 700px){
+		margin-top: 0;
+	}
+}
+
+.btn-icons {
+	outline: 0;
+}
+
+.prev,
+.next {
+	display: none;
+}
+
+.portfolio {
+	padding: 80px calc(50% - 500px);
+	margin-bottom: -50px;
+
+		&__divider {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			position: relative;
+
+			&:before,
+			&:after {
+				content: "";
+				border-top: 1px dotted $azure;
+				width: calc(50% - 36px);
+				height: 1px;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			&:before {
+				left: 0;
+			}
+
+			&:after {
+				right: 0;
+			}
+		}
+
+		&__icons {
+			width: auto;
+			height: 35px;
+		}
+
+		&__title {
+			@include text-style1;
+
+			text-align: center;
+			font-size: 40px;
+			margin-bottom: 20px;
+		}
+
+		&__item {
+			&-title {
+				@include text-style1;
+		
+				margin-bottom: 15px;
+				font-size: 40px;
+			}
+
+			&-wrapper {
+				position: relative;
+				margin-top: 25px;
+				height: 365px;
+
+				@media screen and (max-width: 700px) {
+					height: 175px;
+				}
+		
+				.active {
+					opacity: 1;
+				}
+			}
+		
+			&-image {
+				opacity: 0;
+				transition: ease-in-out 0.3s;
+				position: absolute;
+				background-size: cover;
+				background-position: center;
+				width: 100%;
+				height: 100%;
+
+				&--open {
+					width: 80%;
+					height: 80%;
+					display: flex;
+				}
+
+				&.active {
+					background-size: cover;
+					background-position: center;
+				}
+			}
+		}
+
+		&__progress {
+			&-bar {
+				height: 10px;
+				width: 100%;
+				margin-bottom: 30px;
+				display: flex;
+			}
+
+			&-item {
+				height: 100%;
+				flex: 1 0 auto;
+				align-self: stretch;
+				background-color: $white;
+				display: block;
+
+
+				&.active {
+					background-color: $azure;
+				}
+			}
+		}
+
+		&__items {
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			margin-bottom: 30px;
+
+			&.portfolio-theme {
+				width: 100%;
+			}
+
+			&.text {
+				width: 100%;
+				text-align: left;
+			}
+		}
+	}
+
+.btn-show {
+	@include text-style1;
+
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: 2px solid $azure;
+	padding: 18px 30px 18px 30px;
+	background-color: $very-light-blue;
+	color: $azure;
+	border-radius: 3px;
+	outline: 0;
+
+	&:hover,
+	&:focus{
+		background-color: $azure;
+		color: $very-light-blue;
+		cursor: pointer;
+	}
+}
+
+.slider {
+	position: relative;
+	width: 100%;
+
+	&--open {
+		position: fixed;
+		z-index: 10;
+		padding: 10%;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background: rgba(0, 0, 0, 0.500);
+		-webkit-transition:.3s ease-in-out;
+		-moz-transition:.3s ease-in-out;
+		-ms-transition:.3s ease-in-out;
+		-o-transition:.3s ease-in-out;
+		transition:.3s ease-in-out;
+
+		@media screen and (max-width: 700px){ 
+			padding: 100px 12px;
+		}
+
+		.prev,
+		.next {
+			cursor: pointer;
+			display: block;
+			position: absolute;
+			top: 50%;
+			width: 50px;
+			font-weight: bold;
+			padding: 12px;
+			margin-top: -50px;
+			color: $azure;
+			font-size: 20px;
+			background-color: rgba(231, 245, 255, 0.7);
+			border: 2px solid $azure;
+			border-radius: 50%;
+			// transition: 0.6s ease;
+			user-select: none;
+			-webkit-user-select: none;
+			z-index: 10;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+			right: 10px;
+		}
+
+		.prev {
+			left: 10px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover,
+		.next:hover {
+			background-color: $azure;
+			border-radius: 50%;
+			color: $very-light-blue;
+		}
+
+		.slider__icon {
+			margin-right: 5%;
+
+			@media screen and (max-width: 700px){ 
+				margin-right: 0;
+			}
+		}
+	
+		.portfolio__item-wrapper {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+
+			@media screen and (max-width: 700px){ 
+				height: 210px;
+			}
+		}
+
+		.portfolio__item {
+		
+			&-image {
+				width: 100%;
+				height: 100%;
+		}
+	}
+
+
+		.slider__item-overlay:hover  {
+			opacity: 0;
+		}
+
+		.slider__item-overlay {
+			display: none;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		z-index: 5;
+		right: 10px;
+		top: -5px;
+	}
+	
+	&__item {
+		width: 100%;
+		flex-direction: column;
+
+
+		&-overlay {
+			position: absolute;
+			opacity: 0;
+			background-color: $black;
+			width: 100%;
+			height: calc(100% + 10px);
+			display: flex;
+			transition: ease-in 0.3s;
+			justify-content: center;
+			align-items: center;
+			z-index: 2;
+
+			&-text  {
+				color: #fff;
+				font-size: 33px!important;
+				font-weight: 500;
+			
+			}
+
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+
+		&-image{
+			margin-top: 25px;
+			width: 100%;
+			height: 170px;
+			background-size: cover;
+			background-position: center;
+		}
+	}
+}
+
+
+@media screen and (min-width: 700px){ 
+	.portfolio {
+		display: flex;
+		flex-wrap: nowrap;
+		padding: 80px calc(50% - 500px);
+	
+		&__items {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+		}
+	
+		&__item
+			&-image {
+			height: 320px;
+		}
+	
+		&__divider {
+	
+			&:before,
+			&:after {
+				width: calc(50% - 50px);
+			}
+		}
+	}
+	
+
+	
+	.slider {
+		&__item {
+			&-image{
+				height: 320px;
+			}
+		}
+
+		&__icon {
+			top: 15px;
+		}
+	}
+	
+
+	.btn-right {
+		justify-content: flex-end;
+		align-items: flex-end;
+		display: flex;
+	}
+
+}
+
+.switch {
+	padding: 40px calc(50% - 500px);
+	background-color: $very-light-blue;
+}
+
+	.intro__block {
+
+		&--design {
+			display: flex;
+			width: 100%;
+			background-color: $very-light-blue;
+			margin-top: 22px;
+
+			&-left {
+				width: 50%;
+				margin: 40px;
+			}
+
+			&-right {
+				width: 80%;
+				padding: 40px;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+			}
+
+			&-photo {
+				width: 100%;
+				height: 250px;
+				background-size: cover;
+				background-position: center;
+			}
+
+			&-heading {
+				width: 80%;
+				@include text-style1;
+
+				font-size: 40px;
+				font-weight: bold;
+				text-align: left;
+			}
+		}
+
+		.portfolio {
+			&__list {
+				@include text-style1;
+
+				font-size: 14px;
+				line-height: 1.5em;
+				list-style: none;
+				text-align: left;
+				padding-left: 15px;
+				font-weight: 300;
+				padding-bottom: 30px;
+
+				&-item:before {
+					content: "• ";
+					color: $azure; 
+					padding-right: 10px;
+				}
+			}
+		}
+	}

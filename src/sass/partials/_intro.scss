@@ -1,0 +1,272 @@
+.intro {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $very-light-blue;
+
+	&__block {
+		width: 100%;
+		background-color: $white;
+		margin: 0 auto;
+		margin-top: 25px;
+
+		.portfolio-archive {
+			@include text-style1;
+
+			background-color: #fff;
+			border: 0;
+
+			font-size: 20px;
+			font-weight: 500;
+			padding: 16px;
+			display: flex;
+
+			&.current {
+				background: $very-light-blue;
+				border-left: 4px solid $azure;
+				margin-left: 15px;
+			}
+
+			a {
+				color: $black;
+				text-decoration: none;
+				letter-spacing: 0.6;
+			}
+		}
+
+		&--heading {
+			@include text-style1;
+
+			font-size: 23px;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		&--name {
+			@include text-style1;
+
+			font-size: 20px;
+			color: $azure;
+			margin-bottom: 0;
+
+			&-bottom {
+				@include text-style1;
+
+				font-size: 14px;
+				font-weight: normal;
+				text-transform: uppercase;
+				margin-top: 0;
+				padding-top: 8px;
+				letter-spacing: 0.8px;
+			}
+		}
+
+		&--profile {
+			display: flex;
+			justify-content: center;
+			
+			&-photo {
+				
+				background-size: cover;
+				background-position: center;
+				width: 125px;
+				height: 125px;
+				border-radius: 50%;
+				border: 1px solid $azure;
+			}	
+		}
+
+		&--left {
+			padding: 20px;
+			
+			&-name {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				border-bottom: 2px solid $very-light-blue;
+			}
+		}
+
+		&--right {
+			width: 100%;
+			padding: 20px;
+
+			p {
+				@include text-style1;
+
+				font-size: 14px;
+				font-weight: normal;
+				line-height: 1.6em;
+				margin-top: 0;
+				letter-spacing: 0;
+			}
+		}
+	}
+}
+
+hr.style-eight {
+	overflow: visible; /* For IE */
+	padding: 0;
+	border: none;
+	border-top: 1px dotted $azure;
+	text-align: center;
+	width: 100%;
+}
+hr.style-eight:after {
+	@include text-style1;
+
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 0.8px;
+	color: $azure;
+	content: "A short introduction";
+	text-transform: uppercase;
+	display: inline-block;
+	position: relative;
+	top: -0.7em;
+	padding: 0 0.70em;
+	background: $very-light-blue;
+}
+
+@media screen and (min-width: 700px){
+
+	.intro {
+
+		padding-top: 150px;
+		padding-bottom: 50px;
+	
+		&__block {
+			display: flex;
+			width: 100%;
+			background-color: $white;
+			margin-top: 22px;
+	
+			&--heading {
+				font-size: 40px;
+			}
+	
+			&--left {
+				width: 30%;
+				border-right: 2px solid $very-light-blue;
+				padding: 20px 0 0 15px;
+				margin: 40px 0;
+	
+				&-name {
+					border: 0;
+					padding-bottom: 0;
+				}
+			}
+	
+			&--right {
+				width: 80%;
+				padding: 40px;
+			}
+		}
+	}
+	
+	hr.style-eight {
+		width: 100%;
+	}
+
+	hr.style-eight:after {
+		font-size: 16px;
+	}
+}
+
+.btn-icons {
+	padding: 6px 8px;
+	margin-right: 10px;
+	margin-top: 20px;
+	background-color: $very-light-blue;
+	border: 2px solid $azure;
+	border-radius: 3px;
+	color: $azure;
+	margin-bottom: -10px;
+
+	&:hover {
+		background-color: $azure;
+		color: $white;
+		cursor: pointer;
+	}
+
+	&--home {
+		padding: 6px 8px;
+		margin-right: 10px;
+		margin-top: 20px;
+		background-color: $very-light-blue;
+		border: 2px solid $azure;
+		border-radius: 3px;
+		color: $azure;
+		margin-bottom: -10px;
+		outline: 0;
+
+	&:hover {
+		background-color: $azure;
+		color: $white;
+		cursor: pointer;
+		
+		}
+	}
+
+}
+
+@media screen and (max-width: 700px) {
+	
+	.switch {
+		padding: 0!important;
+	}
+	
+	.btn-show {
+		background-color: $white!important;
+		margin-top: 45px!important;
+
+		&:hover {
+			background-color: $azure!important;
+		}
+	}
+
+	
+
+	.intro__block {
+
+		&--right p {
+			font-size: 13px!important;
+			
+		}
+		&--design {
+			display: flex;
+			width: 100%;
+			background-color: #e7f5ff;
+			flex-wrap: wrap;
+			flex-direction: column-reverse;
+		
+			&-photo {
+				height: 165px!important;
+			}
+			&-right {
+				width: 100%!important;
+				padding: 35px 10px;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+			}
+
+			&-left {
+				width: 100%!important;
+				padding: 15px!important;
+				margin: 0!important;
+			}
+
+			&-heading {
+				font-size: 25px!important;
+				text-align: center!important;
+				width: 100%!important;
+			}
+		}
+	}
+}
